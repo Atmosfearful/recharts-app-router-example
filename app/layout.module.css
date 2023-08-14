@@ -1,0 +1,26 @@
+.layoutContainer {
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  min-height: 100vh;
+}
+
+.desktopNav {
+  border: 2px solid black;
+  padding: 16px;
+}
+
+.desktopNav ul {
+  list-style-type: none;
+  display: grid;
+  gap: 8px;
+}
+
+.desktopNav ul li {
+  font-size: 20px;
+}
+
+.contentContainer {
+  border: 2px solid gray;
+  padding: 16px;
+}
