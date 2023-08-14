@@ -21,6 +21,14 @@
 }
 
 .contentContainer {
+  display: grid;
   border: 2px solid gray;
+}
+
+.contentContainer footer {
+  margin-top: auto;
   padding: 16px;
+  min-height: 116px;
+  color: white;
+  background-color: rgb(73, 73, 73);
 }

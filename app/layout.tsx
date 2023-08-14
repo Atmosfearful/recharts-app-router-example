@@ -39,7 +39,10 @@ export default function RootLayout({
               </li>
             </ul>
           </nav>
-          <div className={styles.contentContainer}>{children}</div>
+          <div className={styles.contentContainer}>
+            {children}
+            <footer>This is a shared layout footer for all pages</footer>
+          </div>
         </div>
       </body>
     </html>
