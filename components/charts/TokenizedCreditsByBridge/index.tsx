@@ -16,7 +16,7 @@ const demoFixture = [
 
 async function fetchData() {
   const res = await fetch(
-    "https://staging-carbon-dashboard-9yimq.ondigitalocean.app/api/v1/credits/agg/daily?bridge=toucan&status=bridged&operator=cumsum",
+    "https://staging-carbon-dashboard-9yimq.ondigitalocean.app/api/v1/credits/agg?bridge=c3",
     {
       next: {
         revalidate: 60,

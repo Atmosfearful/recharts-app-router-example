@@ -2,11 +2,9 @@ import OverviewCard from "@/components/OverviewCard";
 import Skeleton from "@/components/Skeleton";
 import VerraCreditsChart from "@/components/charts/VerraCredits";
 import { Suspense } from "react";
+import TokenizedCreditsByBridge from "./@tokenizedCreditsChart/page";
 
-export default function RootLayout(props: {
-  children: React.ReactNode;
-  tokenizedCreditsChart: JSX.Element;
-}) {
+export default function RootLayout(props: { children: React.ReactNode }) {
   return (
     <>
       {props.children}
@@ -22,7 +20,9 @@ export default function RootLayout(props: {
         title="Tokenized credits by bridge"
         href="/details/tokenized-credits-by-bridge"
       >
-        {props.tokenizedCreditsChart}
+        <Suspense fallback={<Skeleton />}>
+          <TokenizedCreditsByBridge />
+        </Suspense>
       </OverviewCard>
     </>
   );
