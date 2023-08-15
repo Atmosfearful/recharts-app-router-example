@@ -6,6 +6,7 @@
   padding: 16px;
   border: 0.5px solid gray;
   max-width: 800px;
+  background-color: white;
 }
 
 .cardHeader {

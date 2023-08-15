@@ -45,7 +45,7 @@ const demoFixture = [
   },
 ];
 
-async function fetchVerraCreditsData() {
+async function fetchData() {
   const res = await fetch(
     "https://staging-carbon-dashboard-9yimq.ondigitalocean.app/api/v1/credits/agg/daily?bridge=toucan&status=bridged&operator=cumsum"
   );
@@ -54,12 +54,12 @@ async function fetchVerraCreditsData() {
   }
   const _data = await res.json(); // just fetching for a real async experience
   // pause for 2 seconds
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   return demoFixture;
 }
 
 /** Async server component that renders a Recharts client component */
 export default async function VerraCreditsChart() {
-  const data = await fetchVerraCreditsData();
+  const data = await fetchData();
   return <Chart data={data} />;
 }

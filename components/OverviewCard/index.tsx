@@ -2,8 +2,7 @@ import Link from "next/link";
 import styles from "./styles.module.css";
 
 /**
- * A card that contain a chart or other data to be displayed in an overview page.
- * Includes a title, description, hyperlink and other elements.
+ * A UI layout component to position content in a white card with hyperlinks and title.
  */
 export default function OverviewCard(props: {
   children: React.ReactNode;
