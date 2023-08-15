@@ -32,10 +32,7 @@ export default function OverviewPage() {
         </a>
         .
       </p>
-      <OverviewCard
-        title="Tokenized credits by bridge"
-        href="/details/tokenized-credits-by-bridge"
-      >
+      <OverviewCard title="Verra credits" href="/details/verra-credits">
         <Suspense fallback={<Skeleton />}>
           <VerraCreditsChart />
         </Suspense>
