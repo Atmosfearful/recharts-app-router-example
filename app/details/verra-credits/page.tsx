@@ -15,8 +15,8 @@ export default function Page() {
         </Suspense>
       </div>
       <p>
-        For this page, I have added a 2 second delay to fetch and forced server
-        rendering of each request.
+        For this page, I have used Suspense and I have forced server rendering
+        of each request with `no-cache` and `revalidate: 0`.
       </p>
     </main>
   );
