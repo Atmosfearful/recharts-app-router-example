@@ -21,17 +21,6 @@ export default function OverviewPage() {
         </a>{" "}
         and explore the directory/file structure.
       </p>
-      <p>
-        Caching & fetching behavior can be further fine-tuned for a page or
-        layout using{" "}
-        <a
-          href="https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config"
-          target="_blank"
-        >
-          Route Segment Config
-        </a>
-        .
-      </p>
       <OverviewCard title="Verra credits" href="/details/verra-credits">
         <Suspense fallback={<Skeleton />}>
           <VerraCreditsChart />
