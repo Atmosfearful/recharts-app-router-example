@@ -16,7 +16,7 @@ export default function Page() {
       </div>
       <p>
         For this page, I have used Suspense and I have forced server rendering
-        of each request with `no-cache` and `revalidate: 0`.
+        of each request with `no-cache`.
       </p>
     </main>
   );

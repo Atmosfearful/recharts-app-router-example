@@ -50,14 +50,13 @@ async function fetchData() {
     "https://staging-carbon-dashboard-9yimq.ondigitalocean.app/api/v1/credits/agg/daily?bridge=toucan&status=bridged&operator=cumsum",
     {
       cache: "no-store",
-      next: {
-        revalidate: 0,
-      },
     }
   );
   if (!res.ok) {
     throw new Error("Failed to fetch verra credits data");
   }
+  // wait 2 seconds to show skeleton
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const _data = await res.json(); // just fetching for a real async experience
   return demoFixture;
 }
