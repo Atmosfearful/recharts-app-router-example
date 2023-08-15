@@ -20,15 +20,22 @@
   font-size: 20px;
 }
 
-.contentContainer {
+.contentColumn {
   display: grid;
   border: 2px solid gray;
 }
 
-.contentContainer footer {
+.contentColumn footer {
   margin-top: auto;
   padding: 16px;
   min-height: 116px;
   color: white;
   background-color: rgb(73, 73, 73);
+}
+
+.contentArea {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }

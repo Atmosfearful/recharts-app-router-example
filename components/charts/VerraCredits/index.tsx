@@ -47,14 +47,18 @@ const demoFixture = [
 
 async function fetchData() {
   const res = await fetch(
-    "https://staging-carbon-dashboard-9yimq.ondigitalocean.app/api/v1/credits/agg/daily?bridge=toucan&status=bridged&operator=cumsum"
+    "https://staging-carbon-dashboard-9yimq.ondigitalocean.app/api/v1/credits/agg/daily?bridge=toucan&status=bridged&operator=cumsum",
+    {
+      cache: "no-store",
+      next: {
+        revalidate: 0,
+      },
+    }
   );
   if (!res.ok) {
     throw new Error("Failed to fetch verra credits data");
   }
   const _data = await res.json(); // just fetching for a real async experience
-  // pause for 2 seconds
-  await new Promise((resolve) => setTimeout(resolve, 2000));
   return demoFixture;
 }
 

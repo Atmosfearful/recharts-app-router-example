@@ -1,10 +1,8 @@
 import VerraCreditsChart from "@/components/charts/VerraCredits";
-import styles from "./page.module.css";
+import styles from "./styles.module.css";
 import Link from "next/link";
 import { Suspense } from "react";
 import Skeleton from "@/components/Skeleton";
-
-export const dynamic = "force-dynamic";
 
 export default function Page() {
   return (
@@ -17,10 +15,8 @@ export default function Page() {
         </Suspense>
       </div>
       <p>
-        I have added a 2 second delay to fetch. Take note of Skeleton loading
-        states and the default caching behavior. The fetch is shared across page
-        navigations, so no reload is needed when clicking <code>details</code>{" "}
-        or <code>back</code>
+        For this page, I have added a 2 second delay to fetch and forced server
+        rendering of each request.
       </p>
     </main>
   );

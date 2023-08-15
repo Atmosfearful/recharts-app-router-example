@@ -16,7 +16,12 @@ const demoFixture = [
 
 async function fetchData() {
   const res = await fetch(
-    "https://staging-carbon-dashboard-9yimq.ondigitalocean.app/api/v1/credits/agg/daily?bridge=toucan&status=bridged&operator=cumsum"
+    "https://staging-carbon-dashboard-9yimq.ondigitalocean.app/api/v1/credits/agg/daily?bridge=toucan&status=bridged&operator=cumsum",
+    {
+      next: {
+        revalidate: 60,
+      },
+    }
   );
   if (!res.ok) {
     throw new Error("Failed to fetch verra credits data");
