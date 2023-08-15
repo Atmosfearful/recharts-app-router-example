@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Suspense } from "react";
 import Skeleton from "@/components/Skeleton";
 
+export const dynamic = "force-dynamic";
+
 export default function Page() {
   return (
     <main className={styles.main}>

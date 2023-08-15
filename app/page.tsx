@@ -22,21 +22,20 @@ export default function Page() {
         and explore the directory/file structure.
       </p>
       <p>
-        I have added a 2 second delay to fetch for the Verra chart. Take note of
-        Skeleton loading states and the default caching behavior. The fetch is
-        shared across page navigations, so no reload is needed when clicking{" "}
-        <code>details</code> or <code>back</code>.
+        Take note of Skeleton loading states using React Suspense. Data fetching
+        happens concurrently for each chart.
       </p>{" "}
       <p>
-        Caching & fetching behavior can be further fine-tuned for a page or
-        layout using{" "}
+        I have added a 2 second delay to fetch for the Verra chart, and forced
+        it to server render every request. Caching & fetching behavior can be
+        further fine-tuned for a page or layout using{" "}
         <a
           href="https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config"
           target="_blank"
         >
           Route Segment Config
         </a>
-        , outside the scope of this demo.
+        .
       </p>
       <OverviewCard title="Verra credits" href="/details/verra-credits">
         <Suspense fallback={<Skeleton />}>
