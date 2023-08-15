@@ -1,4 +1,9 @@
+import OverviewCard from "@/components/OverviewCard";
 import styles from "./page.module.css";
+import { Suspense } from "react";
+import VerraCreditsChart from "@/components/charts/VerraCredits";
+import Skeleton from "@/components/Skeleton";
+import TokenizedCreditsByBridge from "@/components/charts/TokenizedCreditsByBridge";
 
 /** Overview page (index/landing page) captured via rewrite in next.config.js*/
 export default function OverviewPage() {
@@ -27,6 +32,20 @@ export default function OverviewPage() {
         </a>
         .
       </p>
+      <OverviewCard
+        title="Tokenized credits by bridge"
+        href="/details/tokenized-credits-by-bridge"
+      >
+        <Suspense fallback={<Skeleton />}>
+          <VerraCreditsChart />
+        </Suspense>
+      </OverviewCard>
+      <OverviewCard
+        title="Tokenized credits by bridge"
+        href="/details/tokenized-credits-by-bridge"
+      >
+        <TokenizedCreditsByBridge />
+      </OverviewCard>
     </main>
   );
 }
